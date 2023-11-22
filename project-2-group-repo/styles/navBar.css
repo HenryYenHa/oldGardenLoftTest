@@ -1,0 +1,120 @@
+/* TODO: Get proper heights and set icons and text up properly */
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgb(248, 230, 215) 100%
+  );
+} */
+
+/* Entire NavBar */
+#navBar {
+  flex: 1;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-color: var(--tempColorCheck1);
+  border-style: solid;
+  align-content: center;
+}
+
+/* Logo Section */
+.nav-item:first-child {
+  margin-right: auto;
+  padding-left: 5%;
+}
+
+
+/* Split Items on right */
+.nav-item:last-child {
+  margin-left: auto;
+  padding-right: 5%;
+}
+
+/* Center section; page navigation */
+#mids {
+  height: 100%;
+  display: flex;
+  transition: scale;
+  align-items: center;
+}
+
+#mids a:hover {
+  transform: scale(125%);
+  transition-duration: 0.3s;
+}
+
+#mids img {
+  height: 10%;
+}
+
+
+/* Logo Stuff */
+#smartLoftLogo {
+  padding-top: 2vh;
+}
+
+#smartLoftLogo img {
+  height: 14vh;
+}
+
+
+
+
+/* Remove Hyperlink Underline */
+.navLinkButton > a, #mids > a, #navSplitR > a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navIconText {
+  color: var(--gardenLoftGrey);
+}
+
+.navSplitR {
+  display: inherit;
+}
+
+#navProfile{
+  outline-style: solid ;
+  border-radius: 2vh;
+  flex-direction: row;
+}
+
+#navProfileText{
+  padding-left: 3vw;
+}
+#navProfileIcon{
+  padding-right: 3vw;
+}
+
+#navLanguageIcon,
+#navProfileIcon {
+  height: 6vh;
+  padding-inline: 5px;
+}
+
+#navGLLogo {
+  width: 120px;
+}
+
+.navLinkButton {
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
+

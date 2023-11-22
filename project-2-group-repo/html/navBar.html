@@ -1,0 +1,159 @@
+<!-- TODO: Get Highlighted versions on Nav Bar -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar Portion</title>
+    <script src="./js/home.js"></script>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/navBar.css" />
+  </head>
+
+  <body>
+    <nav id="navBar">
+      <!-- Smart Loft Logo -->
+      <div class="navSplitL">
+        <a role="button" id="smartLoftLogo" name="smartLoftLogo" ;>
+          <img
+            src="../images/SmartLoftLogo.svg"
+            alt="Smart Loft Logo"
+            id="navSLLogo"
+            name="navSLLogo"
+            class="navIcon"
+          />
+        </a>
+      </div>
+      <div id="mids">
+        <!-- Health Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navHealthButton"
+          name="navHealthButton"
+          href="./health.html"
+        >
+          <img
+            src="../images/navHealthIcon.svg"
+            alt="To Health Page"
+            class="navIcon"
+          />
+          <p class="navIconText" id="navHealthButtonText">Health</p>
+        </a>
+        <!-- Community Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navCommunityButton"
+          name="navCommunityButton"
+          href="./community.html"
+        >
+          <img
+            src="../images/navCommunityIcon.svg"
+            alt="To Community Page"
+            class="navIcon"
+          />
+          <p class="navIconText" id="navCommunityText">Community</p>
+        </a>
+        <!-- My Loft Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navMyLoftButton"
+          name="navMyLoftButton"
+          href="index.html"
+        >
+          <img
+            src="../images/navMyLoftIcon.svg"
+            alt="To My Loft"
+            class="navIcon"
+          />
+          <p class="navIconText" id="navMyLoftText">My Loft</p>
+        </a>
+        <!-- Services Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navServicesButton"
+          name="navServicesButton"
+          href="./services.html"
+        >
+          <img
+            src="../images/navServicesIcon.svg"
+            alt="To Services"
+            class="navIcon"
+          />
+          <p class="navIconText" id="navServicesButtonText">Services</p>
+        </a>
+        <!-- Calendar Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navCalendarButton"
+          name="navCalendarButton"
+          href="./calendar.html"
+        >
+          <img
+            src="..//images/navCalendarIcon.svg"
+            alt="To Calendar"
+            class="navIcon"
+          />
+          <p class="navIconText" id="navCalendarButtonText">Calendar</p>
+        </a>
+      </div>
+
+      <div class="navSplitR">
+        <!-- Alert(s) button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navAlert"
+          name="navAlert"
+          onclick="console.log('This does nothing.')"
+        >
+          <img
+            class="navIcon"
+            id="navAlertIcon"
+            src="../images/navAlertIcon.svg"
+            alt="Alert Icon"
+          />
+        </a>
+        <!-- Language Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navLanguage"
+          name="navLanguage"
+          href="./language.html"
+        >
+          <img
+            class="navIcon"
+            id="navLanguageIcon"
+            name="navLanguageIcon"
+            src="../images/navLanguages.svg"
+            alt="To Languages"
+          />
+        </a>
+
+        <!-- Profile Button -->
+        <a
+          class="navLinkButton"
+          role="button"
+          id="navProfile"
+          name="navProfile"
+          href="./profile.html"
+        >
+          <p class="navIconText" id="navProfileText">Profile</p>
+          <img
+            src="../images/navProfileIcon(Solo).svg"
+            alt="To Profile"
+            name="navProfileIcon"
+            id="navProfileIcon"
+          />
+        </a>
+      </div>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!-- use comments like this before each different section of the page for others to easily find -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Smart Loft</title>
+
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/fancySwitch.js"></script>
+    <!-- <script src="../scripts/LampLight.js"></script> -->
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <!--These scripts enables one to pulling things from other files-->
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <script src="../scripts/loadItems.js"></script>
+  </head>
+  <body>
+    <!-- This loads the nav bar -->
+    <section id="navBar"></section>
+    <section id="fancyTest"></section>
+    <h1 style="padding-top: 10dvh">My Smart Loft</h1>
+
+    <!---This loads the Lamplight toggle button -->
+    <section id="LampLight"></section>
+
+    <button onclick="turnOnSwitch()">Turn On</button>
+    <button onclick="turnOffSwitch()">Turn Off</button>
+    <!-- <div id="installFancySwitch"></div> -->
+  </body>
+</html>
