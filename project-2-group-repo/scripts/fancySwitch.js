@@ -2,7 +2,7 @@
 // https://developers.home-assistant.io/docs/api/websocket
 // demoMove1 key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhOGNiMTNjZTJiN2Y0ZDFjYjk0MWM1YzFjYTRmN2YyMSIsImlhdCI6MTcwMDI1MDQxNywiZXhwIjoyMDE1NjEwNDE3fQ.xc0OTLmb-UVyHwM-ts1HP36neodPU5t4UzSy0i8OJsQ
 const socket = new WebSocket("ws://homeassistant.local:8123/api/websocket");
-var idNumber = 1;
+var idNumber = 2;
 
 socket.onopen = (event) => {
   console.log("WebSocket connection opened:", event);
@@ -19,6 +19,7 @@ socket.onopen = (event) => {
   // Subscribe to events (optional)
   socket.send(
     JSON.stringify({
+      id: 1,
       type: "subscribe_events",
       event_type: "state_changed",
     })
@@ -81,5 +82,5 @@ function flickSwitch(buttonID) {
 
 function checkLightStatus(event) {
   const data = JSON.parse(event.data);
-  console.log("checklight" + data);
+  console.log("checklight", data);
 }
