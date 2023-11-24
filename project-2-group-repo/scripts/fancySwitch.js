@@ -2,9 +2,18 @@
 // https://developers.home-assistant.io/docs/api/websocket
 // demoMove1 key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhOGNiMTNjZTJiN2Y0ZDFjYjk0MWM1YzFjYTRmN2YyMSIsImlhdCI6MTcwMDI1MDQxNywiZXhwIjoyMDE1NjEwNDE3fQ.xc0OTLmb-UVyHwM-ts1HP36neodPU5t4UzSy0i8OJsQ
 const socket = new WebSocket("ws://homeassistant.local:8123/api/websocket");
-var idNumber = 2;
+var idNumber = 1; //Initial ID number
 
-socket.onopen = (event) => {
+//LIST OF DEVICES/INPUTS FROM PI
+const motionSensor = "binary_sensor.presence_sensor_fp2_1708_presence_sensor_1"; //Name of Motion Sensor
+const lampLight = "switch.thing2"; //Name of Lamp
+const lightSensor = "sensor.presence_sensor_fp2_1708_light_sensor_light_level"; //Name of Light sensor
+const weightScale = "sensor.smart_scale_c1_weight"; //Name of Weight scale
+
+const autoLeave = "automation.leave_off_light"; //Name of Automation1
+const autoEnter = "automation.enter_for_light"; // Name of Automation2
+
+socket.onopen = async (event) => {
   console.log("WebSocket connection opened:", event);
 
   // Authenticate with Home Assistant
@@ -19,17 +28,37 @@ socket.onopen = (event) => {
   // Subscribe to events (optional)
   socket.send(
     JSON.stringify({
-      id: 1,
+      id: 0,
       type: "subscribe_events",
-      event_type: "state_changed",
     })
   );
 };
 
 socket.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  console.log("Received message:", data);
-  checkLightStatus(event);
+  const data1 = JSON.parse(event.data);
+  // console.log("Received message:", data1);
+  // const checkThis = JSON.stringify(data1);
+
+  console.log("Type= ", data1.type);
+  if (data1.type == "event") {
+    const deviceID = data1.event.data.entity_id;
+    console.log("EntityID: ", deviceID);
+    switch (deviceID) {
+      case lampLight:
+        // code block
+        break;
+      case lightSensor:
+        // code block
+        break;
+      case motionSensor:
+        break;
+      case weightScale:
+        break;
+
+      default:
+        console.log("Unidentified ID: ", deviceID);
+    }
+  }
 };
 
 socket.onclose = (event) => {
@@ -78,9 +107,4 @@ function flickSwitch(buttonID) {
   } else if (button.checked == false) {
     turnOffSwitch();
   }
-}
-
-function checkLightStatus(event) {
-  const data = JSON.parse(event.data);
-  console.log("checklight", data);
 }
