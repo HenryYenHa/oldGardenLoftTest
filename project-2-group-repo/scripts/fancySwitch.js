@@ -5,9 +5,10 @@ const socket = new WebSocket("ws://homeassistant.local:8123/api/websocket");
 var idNumber = 1; //Initial ID number
 
 //LIST OF DEVICES/INPUTS FROM PI
-const motionSensor = "binary_sensor.presence_sensor_fp2_1708_presence_sensor_1"; //Name of Motion Sensor
 const lampLight = "switch.thing2"; //Name of Lamp
-const lightSensor = "sensor.presence_sensor_fp2_1708_light_sensor_light_level"; //Name of Light sensor
+const motionSensor = "binary_sensor.presence_sensor_fp2_1708_presence_sensor_1"; //Name of Motion Sensor
+const luminositySensor =
+  "sensor.presence_sensor_fp2_1708_light_sensor_light_level"; //Name of Light sensor
 const weightScale = "sensor.smart_scale_c1_weight"; //Name of Weight scale
 
 const autoLeave = "automation.leave_off_light"; //Name of Automation1
@@ -45,14 +46,17 @@ socket.onmessage = (event) => {
     console.log("EntityID: ", deviceID);
     switch (deviceID) {
       case lampLight:
-        // code block
+        console.log("LampD: ", data1);
         break;
-      case lightSensor:
+      case luminositySensor:
+        console.log("LuminSen: ", data1);
         // code block
         break;
       case motionSensor:
+        console.log("MotionSen: ", data1);
         break;
       case weightScale:
+        console.log("WeightSca: ", data1);
         break;
 
       default:
