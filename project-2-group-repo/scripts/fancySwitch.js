@@ -43,6 +43,9 @@ socket.onopen = async (event) => {
 };
 
 socket.onmessage = (event) => {
+  // console.log("ty", typeof event);//debug
+  // console.log("e:", event);//debug
+
   const data1 = JSON.parse(event.data);
   // console.log("Received message:", data1); //debug
   // console.log("Stringified: ", JSON.stringify(data1)); //debug
@@ -73,7 +76,6 @@ socket.onmessage = (event) => {
             }
             break;
           case luminSensor:
-            console.log("LIGHTSSSSSSSS: ", data1);
             const fLumUp = document.getElementById("fancyTest-LightUp");
             const fLumDown = document.getElementById("fancyTest-LightDown");
             if (
@@ -110,13 +112,18 @@ socket.onmessage = (event) => {
             }
             break;
           case weightSensor:
-            console.log("WeightS: ", data1);
+            const weightText = document.getElementById("fancyTestWeight");
+            const givenWeight = data1.event.data.new_state.state;
+            weightText.innerHTML = `Weight = ${givenWeight}kgs or ${
+              givenWeight * 2.2
+            }lbs`;
+            break;
           default:
             //... unless we actually aren't familiar with it.
             console.log("Unlisted ID");
         }
-      } else if (data1.event.data.event_type == "call_service") {
-        console.log("CalledService");
+      } else if (data1.event.event_type == "call_service") {
+        console.log("EventType:call_service");
       } else {
         // Known event types: (["call_service","config_entry_discovered"])
         console.log("Strange event type: ", data1.event.data.event_type);
