@@ -299,3 +299,1336 @@ THIS IS FOR 5 MIN RECORDER DATA
   },
   "id": 2
 }
+
+
+
+Nov 29 Demo Camera JSON Payload
+
+{
+  "type": "event",
+  "event": {
+    "event_type": "state_changed",
+    "data": {
+      "entity_id": "camera.g8t1_sj02_3294_01vr",
+      "old_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "65aab3e73ef35faa057c5243f01cfae88d4495c95db1a5348cbdfa7cf0bec211",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701276236&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3211379698.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T16:43:56+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=65aab3e73ef35faa057c5243f01cfae88d4495c95db1a5348cbdfa7cf0bec211",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T16:48:22.323545+00:00",
+        "context": {
+          "id": "01HGDZPJ9K99JBVH24MCQPYY2V",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "new_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "e39fd1fa6a16a38e65722e36467a9d11de4d4882452f16bc9a20bb975911a028",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701276236&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3211379698.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T16:43:56+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=e39fd1fa6a16a38e65722e36467a9d11de4d4882452f16bc9a20bb975911a028",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T16:50:57.002042+00:00",
+        "context": {
+          "id": "01HGDZV9BA37BP199KJ5PSM88H",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2023-11-29T16:50:57.002042+00:00",
+    "context": {
+      "id": "01HGDZV9BA37BP199KJ5PSM88H",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "id": 2
+}
+
+
+Result example
+
+{
+  "id": 2,
+  "type": "result",
+  "success": true,
+  "result": [
+    {
+      "entity_id": "person.duncan_findlay",
+      "state": "unknown",
+      "attributes": {
+        "editable": true,
+        "id": "duncan_findlay",
+        "user_id": "76b5312dfb8d476793b507f5fdba2207",
+        "device_trackers": [],
+        "friendly_name": "Duncan Findlay "
+      },
+      "last_changed": "2023-11-24T00:52:29.100953+00:00",
+      "last_updated": "2023-11-24T00:52:46.765176+00:00",
+      "context": {
+        "id": "01HFZD17HDF959RQ7TNECYZ705",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "person.group1",
+      "state": "unknown",
+      "attributes": {
+        "editable": true,
+        "id": "group1",
+        "user_id": "47b65013705140feb854f7e516c0396e",
+        "device_trackers": [],
+        "friendly_name": "Group1"
+      },
+      "last_changed": "2023-11-24T00:52:29.101389+00:00",
+      "last_updated": "2023-11-24T00:52:46.765332+00:00",
+      "context": {
+        "id": "01HFZD17HDP6VCMHFQ3A1EHDSF",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "person.group2",
+      "state": "unknown",
+      "attributes": {
+        "editable": true,
+        "id": "group2",
+        "user_id": "984effdc31694678b535d513253fc331",
+        "device_trackers": [],
+        "friendly_name": "Group2"
+      },
+      "last_changed": "2023-11-24T00:52:29.101733+00:00",
+      "last_updated": "2023-11-24T00:52:46.765428+00:00",
+      "context": {
+        "id": "01HFZD17HDWCA6DPV7QN6B11R8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "person.group3",
+      "state": "unknown",
+      "attributes": {
+        "editable": true,
+        "id": "group3",
+        "user_id": "1a07bbd5a29b4e93abc7a251c54b8500",
+        "device_trackers": [],
+        "friendly_name": "Group3"
+      },
+      "last_changed": "2023-11-24T00:52:29.102111+00:00",
+      "last_updated": "2023-11-24T00:52:46.765518+00:00",
+      "context": {
+        "id": "01HFZD17HDZJRVTTCKH0F07K18",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "person.group4",
+      "state": "not_home",
+      "attributes": {
+        "editable": true,
+        "id": "group4",
+        "latitude": 51.045166015625,
+        "longitude": -114.05035273669282,
+        "gps_accuracy": 4.746059396665547,
+        "source": "device_tracker.juliannes_iphone_2",
+        "user_id": "6e911d90a994464cbcfbc3c0ca1c8928",
+        "device_trackers": [
+          "device_tracker.juliannes_iphone_2"
+        ],
+        "friendly_name": "Group4"
+      },
+      "last_changed": "2023-11-24T00:52:29.102455+00:00",
+      "last_updated": "2023-11-24T18:59:47.565234+00:00",
+      "context": {
+        "id": "01HG1B7KQD7GAMAWWMRCTJPQ9J",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "person.group5",
+      "state": "unknown",
+      "attributes": {
+        "editable": true,
+        "id": "group5",
+        "user_id": "bce2e4440769462dac978a1af951dccb",
+        "device_trackers": [],
+        "friendly_name": "Group5"
+      },
+      "last_changed": "2023-11-24T00:52:29.102757+00:00",
+      "last_updated": "2023-11-24T00:52:46.765808+00:00",
+      "context": {
+        "id": "01HFZD17HD7EQQY2H5BN27Y4SH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.home_assistant_supervisor_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": true,
+        "installed_version": "2023.11.6",
+        "in_progress": false,
+        "latest_version": "2023.11.6",
+        "release_summary": null,
+        "release_url": "https://github.com/home-assistant/supervisor/releases/tag/2023.11.6",
+        "skipped_version": null,
+        "title": "Home Assistant Supervisor",
+        "entity_picture": "https://brands.home-assistant.io/hassio/icon.png",
+        "friendly_name": "Home Assistant Supervisor Update",
+        "supported_features": 1
+      },
+      "last_changed": "2023-11-29T18:22:37.172646+00:00",
+      "last_updated": "2023-11-29T18:22:37.172646+00:00",
+      "context": {
+        "id": "01HGE534KMXJJDAHC1SGT2XES7",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.home_assistant_core_update",
+      "state": "on",
+      "attributes": {
+        "auto_update": false,
+        "installed_version": "2023.11.2",
+        "in_progress": false,
+        "latest_version": "2023.11.3",
+        "release_summary": null,
+        "release_url": "https://www.home-assistant.io/latest-release-notes/",
+        "skipped_version": null,
+        "title": "Home Assistant Core",
+        "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+        "friendly_name": "Home Assistant Core Update",
+        "supported_features": 11
+      },
+      "last_changed": "2023-11-24T00:52:36.831413+00:00",
+      "last_updated": "2023-11-24T00:52:36.831413+00:00",
+      "context": {
+        "id": "01HFZD0XTZYV3JD3JEQK2MG0J4",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.samba_share_update",
+      "state": "on",
+      "attributes": {
+        "auto_update": false,
+        "installed_version": "12.1.0",
+        "in_progress": false,
+        "latest_version": "12.2.0",
+        "release_summary": "# Changelog\n\n## 12.2.0\n\n- Decrease Samba log level\n\n#",
+        "release_url": null,
+        "skipped_version": null,
+        "title": "Samba share",
+        "entity_picture": "/api/hassio/addons/core_samba/icon",
+        "friendly_name": "Samba share Update",
+        "supported_features": 25
+      },
+      "last_changed": "2023-11-29T09:57:37.176133+00:00",
+      "last_updated": "2023-11-29T09:57:37.176133+00:00",
+      "context": {
+        "id": "01HGD86ERRFWG4BNK34JFPAVE0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.home_assistant_operating_system_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "installed_version": "11.1",
+        "in_progress": false,
+        "latest_version": "11.1",
+        "release_summary": null,
+        "release_url": "https://github.com/home-assistant/operating-system/releases/tag/11.1",
+        "skipped_version": null,
+        "title": "Home Assistant Operating System",
+        "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+        "friendly_name": "Home Assistant Operating System Update",
+        "supported_features": 3
+      },
+      "last_changed": "2023-11-24T00:52:36.832830+00:00",
+      "last_updated": "2023-11-24T00:52:36.832830+00:00",
+      "context": {
+        "id": "01HFZD0XV0Y16WRZMYNFPRJCZH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sun.sun",
+      "state": "above_horizon",
+      "attributes": {
+        "next_dawn": "2023-11-30T14:37:14.462005+00:00",
+        "next_dusk": "2023-11-30T00:12:45.996275+00:00",
+        "next_midnight": "2023-11-30T07:24:54+00:00",
+        "next_noon": "2023-11-30T19:24:36+00:00",
+        "next_rising": "2023-11-30T15:16:24.565739+00:00",
+        "next_setting": "2023-11-29T23:33:44.158131+00:00",
+        "elevation": 14.23,
+        "azimuth": 203.84,
+        "rising": false,
+        "friendly_name": "Sun"
+      },
+      "last_changed": "2023-11-29T15:14:59.419475+00:00",
+      "last_updated": "2023-11-29T21:04:15.029665+00:00",
+      "context": {
+        "id": "01HGEEB35NXHGB8FVWFASF1MTR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "zone.home",
+      "state": "0",
+      "attributes": {
+        "latitude": 51.0456064,
+        "longitude": -114.057541,
+        "radius": 100,
+        "passive": false,
+        "persons": [],
+        "editable": true,
+        "icon": "mdi:home",
+        "friendly_name": "Home"
+      },
+      "last_changed": "2023-11-24T00:52:37.756151+00:00",
+      "last_updated": "2023-11-24T00:52:37.756151+00:00",
+      "context": {
+        "id": "01HFZD0YQW86ECWST8KYMJKHTD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "automation.turn_light_on_an_hour_before_sunset",
+      "state": "on",
+      "attributes": {
+        "id": "1699565943237",
+        "last_triggered": "2023-11-28T23:34:27.107497+00:00",
+        "mode": "single",
+        "current": 0,
+        "friendly_name": "Turn light on an hour before sunset"
+      },
+      "last_changed": "2023-11-24T00:52:42.746674+00:00",
+      "last_updated": "2023-11-28T23:34:27.130596+00:00",
+      "context": {
+        "id": "01HGC4HD12KXEGTXBEVSPDMR33",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "automation.turn_off_at_11pm",
+      "state": "on",
+      "attributes": {
+        "id": "1699566007036",
+        "last_triggered": "2023-11-29T06:00:00.372804+00:00",
+        "mode": "single",
+        "current": 0,
+        "friendly_name": "Turn off at 11pm"
+      },
+      "last_changed": "2023-11-24T00:52:42.747098+00:00",
+      "last_updated": "2023-11-29T06:00:00.416088+00:00",
+      "context": {
+        "id": "01HGCTKC3M2G9SE3MH9SXFHNF1",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "automation.enter_for_light",
+      "state": "off",
+      "attributes": {
+        "id": "1700602868528",
+        "last_triggered": "2023-11-24T19:12:31.237162+00:00",
+        "mode": "single",
+        "current": 0,
+        "friendly_name": "Enter for light"
+      },
+      "last_changed": "2023-11-24T19:19:43.739456+00:00",
+      "last_updated": "2023-11-24T19:19:43.739456+00:00",
+      "context": {
+        "id": "01HG1CC3VNT2FXS6XXDMCW4MT0",
+        "parent_id": null,
+        "user_id": "47b65013705140feb854f7e516c0396e"
+      }
+    },
+    {
+      "entity_id": "automation.leave_off_light",
+      "state": "off",
+      "attributes": {
+        "id": "1700602904675",
+        "last_triggered": "2023-11-24T19:12:39.175984+00:00",
+        "mode": "single",
+        "current": 0,
+        "friendly_name": "Leave off light"
+      },
+      "last_changed": "2023-11-24T19:19:45.935912+00:00",
+      "last_updated": "2023-11-24T19:19:45.935912+00:00",
+      "context": {
+        "id": "01HG1CC60A7TBG3Z14HFH75Y6R",
+        "parent_id": null,
+        "user_id": "47b65013705140feb854f7e516c0396e"
+      }
+    },
+    {
+      "entity_id": "binary_sensor.rpi_power_status",
+      "state": "off",
+      "attributes": {
+        "device_class": "problem",
+        "icon": "mdi:raspberry-pi",
+        "friendly_name": "RPi Power status"
+      },
+      "last_changed": "2023-11-24T00:52:42.786168+00:00",
+      "last_updated": "2023-11-24T00:52:42.786168+00:00",
+      "context": {
+        "id": "01HFZD13N2GZ44XSSKV71S5G00",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.local_ip",
+      "state": "10.44.22.85",
+      "attributes": {
+        "icon": "mdi:ip",
+        "friendly_name": "Local IP"
+      },
+      "last_changed": "2023-11-24T00:52:42.802498+00:00",
+      "last_updated": "2023-11-24T00:52:42.802498+00:00",
+      "context": {
+        "id": "01HFZD13NJ06277HRES2VDQCJY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_dawn",
+      "state": "2023-11-30T14:37:14+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "icon": "mdi:sun-clock",
+        "friendly_name": "Sun Next dawn"
+      },
+      "last_changed": "2023-11-29T14:35:56.282853+00:00",
+      "last_updated": "2023-11-29T14:35:56.282853+00:00",
+      "context": {
+        "id": "01HGDR42FTMRJAWXSDA7PC8GSS",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_dusk",
+      "state": "2023-11-30T00:12:45+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "icon": "mdi:sun-clock",
+        "friendly_name": "Sun Next dusk"
+      },
+      "last_changed": "2023-11-29T00:13:22.754115+00:00",
+      "last_updated": "2023-11-29T00:13:22.754115+00:00",
+      "context": {
+        "id": "01HGC6RNY2FNMKHMDHZ5VWXHPS",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_midnight",
+      "state": "2023-11-30T07:24:54+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "icon": "mdi:sun-clock",
+        "friendly_name": "Sun Next midnight"
+      },
+      "last_changed": "2023-11-29T07:24:32.008738+00:00",
+      "last_updated": "2023-11-29T07:24:32.008738+00:00",
+      "context": {
+        "id": "01HGCZE4W8FAQVBSYANFG5A2TH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_noon",
+      "state": "2023-11-30T19:24:36+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "icon": "mdi:sun-clock",
+        "friendly_name": "Sun Next noon"
+      },
+      "last_changed": "2023-11-29T19:24:15.011033+00:00",
+      "last_updated": "2023-11-29T19:24:15.011033+00:00",
+      "context": {
+        "id": "01HGE8KZS3J00E0N2DA3RGW1VV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_rising",
+      "state": "2023-11-30T15:16:24+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "icon": "mdi:sun-clock",
+        "friendly_name": "Sun Next rising"
+      },
+      "last_changed": "2023-11-29T15:14:59.421021+00:00",
+      "last_updated": "2023-11-29T15:14:59.421021+00:00",
+      "context": {
+        "id": "01HGDTBJPX8C2Y2KGSA4AJ3WTV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_setting",
+      "state": "2023-11-29T23:33:44+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "icon": "mdi:sun-clock",
+        "friendly_name": "Sun Next setting"
+      },
+      "last_changed": "2023-11-28T23:34:28.112731+00:00",
+      "last_updated": "2023-11-28T23:34:28.112731+00:00",
+      "context": {
+        "id": "01HGC4HE0GNAW15SV2XDMBPDZ2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "tts.google_en_com",
+      "state": "2023-11-23T21:24:52.546560+00:00",
+      "attributes": {
+        "friendly_name": "Google en com"
+      },
+      "last_changed": "2023-11-24T00:52:43.081050+00:00",
+      "last_updated": "2023-11-24T00:52:43.081050+00:00",
+      "context": {
+        "id": "01HFZD13Y9QJA6M9HRSRHM7S5N",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "todo.shopping_list",
+      "state": "0",
+      "attributes": {
+        "icon": "mdi:cart",
+        "friendly_name": "Shopping List",
+        "supported_features": 15
+      },
+      "last_changed": "2023-11-24T00:52:43.387334+00:00",
+      "last_updated": "2023-11-24T00:52:43.387334+00:00",
+      "context": {
+        "id": "01HFZD147VNHQECQKWJBT6S75P",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_battery_level",
+      "state": "75",
+      "attributes": {
+        "unit_of_measurement": "%",
+        "device_class": "battery",
+        "icon": "mdi:battery-70",
+        "friendly_name": "Julianne’s iPhone (2) Battery Level"
+      },
+      "last_changed": "2023-11-24T21:40:56.540694+00:00",
+      "last_updated": "2023-11-24T21:40:56.540694+00:00",
+      "context": {
+        "id": "01HG1MEP2W96E6ND4G3XEDEVNJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_battery_state",
+      "state": "Not Charging",
+      "attributes": {
+        "Low Power Mode": false,
+        "icon": "mdi:battery-70",
+        "friendly_name": "Julianne’s iPhone (2) Battery State"
+      },
+      "last_changed": "2023-11-24T00:52:44.758468+00:00",
+      "last_updated": "2023-11-24T21:40:56.541700+00:00",
+      "context": {
+        "id": "01HG1MEP2XP9GTTEM6SH46SQ11",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_storage",
+      "state": "10.13",
+      "attributes": {
+        "Available": "1.53 GB",
+        "Available (Important)": "18.47 GB",
+        "Available (Opportunistic)": "12.95 GB",
+        "Total": "127.87 GB",
+        "unit_of_measurement": "% available",
+        "icon": "mdi:database",
+        "friendly_name": "Julianne’s iPhone (2) Storage"
+      },
+      "last_changed": "2023-11-24T21:55:46.385884+00:00",
+      "last_updated": "2023-11-24T22:07:13.437306+00:00",
+      "context": {
+        "id": "01HG1NYT0X7J76419HMWXQV2G2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_ssid",
+      "state": "inception",
+      "attributes": {
+        "icon": "mdi:wifi",
+        "friendly_name": "Julianne’s iPhone (2) SSID"
+      },
+      "last_changed": "2023-11-24T18:59:50.701900+00:00",
+      "last_updated": "2023-11-24T18:59:50.701900+00:00",
+      "context": {
+        "id": "01HG1B7PSDF0DRT1S4539CWH59",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_bssid",
+      "state": "94:64:24:bd:3a:d0",
+      "attributes": {
+        "icon": "mdi:wifi-star",
+        "friendly_name": "Julianne’s iPhone (2) BSSID"
+      },
+      "last_changed": "2023-11-24T18:59:50.702411+00:00",
+      "last_updated": "2023-11-24T18:59:50.702411+00:00",
+      "context": {
+        "id": "01HG1B7PSE0ZZ9B026X2VM4FJR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_connection_type",
+      "state": "Wi-Fi",
+      "attributes": {
+        "icon": "mdi:wifi",
+        "friendly_name": "Julianne’s iPhone (2) Connection Type"
+      },
+      "last_changed": "2023-11-24T18:59:50.702841+00:00",
+      "last_updated": "2023-11-24T18:59:50.702841+00:00",
+      "context": {
+        "id": "01HG1B7PSEGC7GHV4PE9ZN183Z",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_sim_1",
+      "state": "Rogers",
+      "attributes": {
+        "Allows VoIP": true,
+        "Carrier ID": "0000000100000001",
+        "Carrier Name": "Rogers",
+        "Current Radio Technology": "Long-Term Evolution (LTE)",
+        "ISO Country Code": "ca",
+        "Mobile Country Code": "302",
+        "Mobile Network Code": "720",
+        "icon": "mdi:sim",
+        "friendly_name": "Julianne’s iPhone (2) SIM 1"
+      },
+      "last_changed": "2023-11-24T00:52:44.760346+00:00",
+      "last_updated": "2023-11-24T00:52:44.760346+00:00",
+      "context": {
+        "id": "01HFZD15JRTX6NY913GFHV0ED4",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_sim_2",
+      "state": "Drei",
+      "attributes": {
+        "Allows VoIP": true,
+        "Carrier ID": "0000000100000002",
+        "Carrier Name": "Drei",
+        "ISO Country Code": "N/A",
+        "Mobile Country Code": "N/A",
+        "Mobile Network Code": "N/A",
+        "icon": "mdi:sim",
+        "friendly_name": "Julianne’s iPhone (2) SIM 2"
+      },
+      "last_changed": "2023-11-24T00:52:44.760704+00:00",
+      "last_updated": "2023-11-24T00:52:44.760704+00:00",
+      "context": {
+        "id": "01HFZD15JRTKVGEHECTBQHG21S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_geocoded_location",
+      "state": "601–699 8 Ave SE\nCalgary AB T2G 5T2\nCanada",
+      "attributes": {
+        "Administrative Area": "AB",
+        "Areas Of Interest": "N/A",
+        "Country": "Canada",
+        "Inland Water": "N/A",
+        "ISO Country Code": "CA",
+        "Locality": "Calgary",
+        "Location": [
+          51.045166015625,
+          -114.05035273669282
+        ],
+        "Name": "601–699 8 Ave SE",
+        "Ocean": "N/A",
+        "Postal Code": "T2G 5T2",
+        "Sub Administrative Area": "Division No. 6",
+        "Sub Locality": "Downtown East Village",
+        "Sub Thoroughfare": "601–699",
+        "Thoroughfare": "8 Ave SE",
+        "Time Zone": "America/Edmonton",
+        "Zones": [],
+        "icon": "mdi:map",
+        "friendly_name": "Julianne’s iPhone (2) Geocoded Location"
+      },
+      "last_changed": "2023-11-24T18:59:47.489012+00:00",
+      "last_updated": "2023-11-24T18:59:47.489012+00:00",
+      "context": {
+        "id": "01HG1B7KN14E1TZB6EBB2G18H6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_last_update_trigger",
+      "state": "Periodic",
+      "attributes": {
+        "icon": "mdi:cellphone-wireless",
+        "friendly_name": "Julianne’s iPhone (2) Last Update Trigger"
+      },
+      "last_changed": "2023-11-24T19:11:37.612013+00:00",
+      "last_updated": "2023-11-24T19:11:37.612013+00:00",
+      "context": {
+        "id": "01HG1BX94CAK6WF0Q2YADW9T07",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_activity",
+      "state": "Unknown",
+      "attributes": {
+        "Confidence": "High",
+        "Types": [
+          "Unknown"
+        ],
+        "icon": "mdi:help-circle",
+        "friendly_name": "Julianne’s iPhone (2) Activity"
+      },
+      "last_changed": "2023-11-24T22:07:13.428259+00:00",
+      "last_updated": "2023-11-24T22:07:13.428259+00:00",
+      "context": {
+        "id": "01HG1NYT0MVSM4P6ATHCAET0RN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_distance",
+      "state": "1131",
+      "attributes": {
+        "unit_of_measurement": "m",
+        "icon": "mdi:hiking",
+        "friendly_name": "Julianne’s iPhone (2) Distance"
+      },
+      "last_changed": "2023-11-24T22:07:13.429191+00:00",
+      "last_updated": "2023-11-24T22:07:13.429191+00:00",
+      "context": {
+        "id": "01HG1NYT0N3WYY95P28F2HNVC8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_floors_ascended",
+      "state": "5",
+      "attributes": {
+        "unit_of_measurement": "floors",
+        "icon": "mdi:stairs-up",
+        "friendly_name": "Julianne’s iPhone (2) Floors Ascended"
+      },
+      "last_changed": "2023-11-24T18:59:47.475962+00:00",
+      "last_updated": "2023-11-24T18:59:47.475962+00:00",
+      "context": {
+        "id": "01HG1B7KMKA1GAEKPQ36WXRW65",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_floors_descended",
+      "state": "0",
+      "attributes": {
+        "unit_of_measurement": "floors",
+        "icon": "mdi:stairs-down",
+        "friendly_name": "Julianne’s iPhone (2) Floors Descended"
+      },
+      "last_changed": "2023-11-24T18:59:47.481636+00:00",
+      "last_updated": "2023-11-24T18:59:47.481636+00:00",
+      "context": {
+        "id": "01HG1B7KMS344RMJEE3NE5B7CX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_steps",
+      "state": "1529",
+      "attributes": {
+        "unit_of_measurement": "steps",
+        "icon": "mdi:walk",
+        "friendly_name": "Julianne’s iPhone (2) Steps"
+      },
+      "last_changed": "2023-11-24T22:07:13.430705+00:00",
+      "last_updated": "2023-11-24T22:07:13.430705+00:00",
+      "context": {
+        "id": "01HG1NYT0PKJ1R6X1XD58WJCKY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.juliannes_iphone_2_average_active_pace",
+      "state": "1",
+      "attributes": {
+        "unit_of_measurement": "m/s",
+        "icon": "mdi:speedometer",
+        "friendly_name": "Julianne’s iPhone (2) Average Active Pace"
+      },
+      "last_changed": "2023-11-24T18:59:47.483347+00:00",
+      "last_updated": "2023-11-24T18:59:47.483347+00:00",
+      "context": {
+        "id": "01HG1B7KMVQP436PSSJEC850QQ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.juliannes_iphone_2_focus",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:moon-waning-crescent",
+        "friendly_name": "Julianne’s iPhone (2) Focus"
+      },
+      "last_changed": "2023-11-24T00:52:44.769935+00:00",
+      "last_updated": "2023-11-24T00:52:44.769935+00:00",
+      "context": {
+        "id": "01HFZD15K1A28PW4QPJZGF2M41",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.smart_scale_c1_weight",
+      "state": "67.8",
+      "attributes": {
+        "unit_of_measurement": "kg",
+        "device_class": "weight",
+        "friendly_name": "Smart Scale C1 Weight"
+      },
+      "last_changed": "2023-11-24T00:52:44.773754+00:00",
+      "last_updated": "2023-11-24T00:52:44.773754+00:00",
+      "context": {
+        "id": "01HFZD15K5QVZDN3AAABNS15GG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.smart_scale_c1_real_time_weight",
+      "state": "unavailable",
+      "attributes": {
+        "unit_of_measurement": "kg",
+        "device_class": "weight",
+        "friendly_name": "Smart Scale C1 Real-time weight"
+      },
+      "last_changed": "2023-11-29T20:58:00.387480+00:00",
+      "last_updated": "2023-11-29T20:58:00.387480+00:00",
+      "context": {
+        "id": "01HGEDZNA38MJAJCZ2D2HZXFRF",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.juliannes_iphone_2",
+      "state": "not_home",
+      "attributes": {
+        "source_type": "gps",
+        "battery_level": 85,
+        "latitude": 51.045166015625,
+        "longitude": -114.05035273669282,
+        "gps_accuracy": 4.746059396665547,
+        "altitude": 1046.4437374090776,
+        "course": 92.48670196533203,
+        "speed": 0.2848018142956638,
+        "vertical_accuracy": 3.361466530565417,
+        "friendly_name": "Julianne’s iPhone (2)"
+      },
+      "last_changed": "2023-11-24T18:59:47.558320+00:00",
+      "last_updated": "2023-11-24T18:59:47.558320+00:00",
+      "context": {
+        "id": "01HG1B7KQ6TDH2ZVGAAARYDFCM",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "weather.forecast_home",
+      "state": "partlycloudy",
+      "attributes": {
+        "temperature": 8.2,
+        "dew_point": -4.9,
+        "temperature_unit": "°C",
+        "humidity": 40,
+        "cloud_coverage": 84.4,
+        "pressure": 1017.4,
+        "pressure_unit": "hPa",
+        "wind_bearing": 357.4,
+        "wind_speed": 17.3,
+        "wind_speed_unit": "km/h",
+        "visibility_unit": "km",
+        "precipitation_unit": "mm",
+        "forecast": [
+          {
+            "condition": "partlycloudy",
+            "datetime": "2023-11-29T19:00:00+00:00",
+            "wind_bearing": 357.4,
+            "temperature": 8.2,
+            "templow": 4.5,
+            "wind_speed": 17.3,
+            "precipitation": 0,
+            "humidity": 40
+          },
+          {
+            "condition": "partlycloudy",
+            "datetime": "2023-11-30T19:00:00+00:00",
+            "wind_bearing": 155.8,
+            "temperature": 5.6,
+            "templow": 0.2,
+            "wind_speed": 11.5,
+            "precipitation": 0,
+            "humidity": 46
+          },
+          {
+            "condition": "cloudy",
+            "datetime": "2023-12-01T19:00:00+00:00",
+            "wind_bearing": 166.4,
+            "temperature": 6.8,
+            "templow": 0.2,
+            "wind_speed": 16.6,
+            "precipitation": 0,
+            "humidity": 44
+          },
+          {
+            "condition": "cloudy",
+            "datetime": "2023-12-02T19:00:00+00:00",
+            "wind_bearing": 292.8,
+            "temperature": 5.3,
+            "templow": -1.3,
+            "wind_speed": 13.3,
+            "precipitation": 0,
+            "humidity": 48
+          },
+          {
+            "condition": "rainy",
+            "datetime": "2023-12-03T19:00:00+00:00",
+            "wind_bearing": 167.1,
+            "temperature": 6.7,
+            "templow": 1.2,
+            "wind_speed": 12.2,
+            "precipitation": 1.4,
+            "humidity": 50
+          },
+          {
+            "condition": "partlycloudy",
+            "datetime": "2023-12-04T19:00:00+00:00",
+            "wind_bearing": 323.1,
+            "temperature": 13,
+            "templow": 3.8,
+            "wind_speed": 30.6,
+            "precipitation": 0.5,
+            "humidity": 56
+          }
+        ],
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "friendly_name": "Forecast Home",
+        "supported_features": 3
+      },
+      "last_changed": "2023-11-29T19:59:13.801309+00:00",
+      "last_updated": "2023-11-29T20:55:14.750852+00:00",
+      "context": {
+        "id": "01HGEDTKHYNEPJFJ3D0YHGCM7T",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.thing2",
+      "state": "off",
+      "attributes": {
+        "friendly_name": "Thing2"
+      },
+      "last_changed": "2023-11-29T19:55:42.235363+00:00",
+      "last_updated": "2023-11-29T19:55:42.235363+00:00",
+      "context": {
+        "id": "01HGEADJBJ2SS8JYGQ5NG3NCBY",
+        "parent_id": null,
+        "user_id": "47b65013705140feb854f7e516c0396e"
+      }
+    },
+    {
+      "entity_id": "switch.thing2_led",
+      "state": "on",
+      "attributes": {
+        "icon": "mdi:led-on",
+        "friendly_name": "Thing2 LED"
+      },
+      "last_changed": "2023-11-29T19:15:42.982551+00:00",
+      "last_updated": "2023-11-29T19:15:42.982551+00:00",
+      "context": {
+        "id": "01HGE84BR6WYWK73RMMVF9X0JX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "media_player.classroom",
+      "state": "off",
+      "attributes": {
+        "friendly_name": "Classroom",
+        "supported_features": 152461
+      },
+      "last_changed": "2023-11-29T18:18:31.692277+00:00",
+      "last_updated": "2023-11-29T18:18:31.692277+00:00",
+      "context": {
+        "id": "01HGE4VMWCAHKJ7F9A8CHAXD8S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.presence_sensor_fp2_1708_presence_sensor_1",
+      "state": "off",
+      "attributes": {
+        "device_class": "occupancy",
+        "friendly_name": "Presence-Sensor-FP2-1708 Presence Sensor 1"
+      },
+      "last_changed": "2023-11-29T20:59:19.997409+00:00",
+      "last_updated": "2023-11-29T20:59:19.997409+00:00",
+      "context": {
+        "id": "01HGEE231X8WZQJ6QPP0JQ8W97",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.presence_sensor_fp2_1708_light_sensor_light_level",
+      "state": "170",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "lx",
+        "device_class": "illuminance",
+        "friendly_name": "Presence-Sensor-FP2-1708 Light Sensor Light Level"
+      },
+      "last_changed": "2023-11-29T20:36:47.827599+00:00",
+      "last_updated": "2023-11-29T20:36:47.827599+00:00",
+      "context": {
+        "id": "01HGECRTJKWGWYD8GB8YVSTGEP",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.presence_sensor_fp2_1708_identify",
+      "state": "2023-11-24T00:39:16.158657+00:00",
+      "attributes": {
+        "friendly_name": "Presence-Sensor-FP2-1708 Identify"
+      },
+      "last_changed": "2023-11-24T00:52:46.756500+00:00",
+      "last_updated": "2023-11-24T00:52:46.756500+00:00",
+      "context": {
+        "id": "01HFZD17H4RSBT79PSPYN88A2C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "media_player.lg_webos_tv_36e6",
+      "state": "on",
+      "attributes": {
+        "source_list": [
+          "AirPlay",
+          "Live TV",
+          "HDMI 1",
+          "HDMI 2",
+          "HDMI 3",
+          "AV",
+          "Component",
+          "LOGICAL HDMI 1",
+          "LOGICAL HDMI 2",
+          "LOGICAL HDMI 3",
+          "LOGICAL HDMI 4",
+          "LOGICAL HDMI 5",
+          "LOGICAL HDMI 6",
+          "LOGICAL HDMI 7",
+          "LOGICAL HDMI 8",
+          "LOGICAL HDMI 9",
+          "LOGICAL HDMI 10",
+          "LOGICAL HDMI 11"
+        ],
+        "source": "HDMI 2",
+        "device_class": "tv",
+        "friendly_name": "CatalystRoomTV",
+        "supported_features": 18433
+      },
+      "last_changed": "2023-11-29T15:45:12.923096+00:00",
+      "last_updated": "2023-11-29T15:45:12.923096+00:00",
+      "context": {
+        "id": "01HGDW2XPVM70N9BD5Y1E6BYKY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.lg_webos_tv_36e6_identify",
+      "state": "2023-11-28T15:51:14.762136+00:00",
+      "attributes": {
+        "friendly_name": "LG webOS TV 36E6 Identify"
+      },
+      "last_changed": "2023-11-29T15:44:25.831655+00:00",
+      "last_updated": "2023-11-29T15:44:25.831655+00:00",
+      "context": {
+        "id": "01HGDW1FQ7J988R3BNQ94SXX4X",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.lg_webos_tv_36e6_mute",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:volume-mute",
+        "friendly_name": "LG webOS TV 36E6 Mute"
+      },
+      "last_changed": "2023-11-29T15:44:25.831315+00:00",
+      "last_updated": "2023-11-29T15:44:25.831315+00:00",
+      "context": {
+        "id": "01HGDW1FQ7X8ECRTR5XH4J1K0A",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.g8t1_sj02_3294_01vr_battery",
+      "state": "off",
+      "attributes": {
+        "device_class": "battery",
+        "friendly_name": "blink G8T1-SJ02-3294-01VR Battery"
+      },
+      "last_changed": "2023-11-28T20:55:56.810239+00:00",
+      "last_updated": "2023-11-28T20:55:56.894480+00:00",
+      "context": {
+        "id": "01HGBVF5PY1YQTA8H7EDH02G4B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.g8t1_sj02_3294_01vr_camera_armed",
+      "state": "off",
+      "attributes": {
+        "friendly_name": "blink G8T1-SJ02-3294-01VR Camera armed"
+      },
+      "last_changed": "2023-11-28T20:55:56.811250+00:00",
+      "last_updated": "2023-11-28T20:55:56.894990+00:00",
+      "context": {
+        "id": "01HGBVF5PYM2YR6VG3TEZ4ZFAS",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.g8t1_sj02_3294_01vr_motion",
+      "state": "off",
+      "attributes": {
+        "device_class": "motion",
+        "friendly_name": "blink G8T1-SJ02-3294-01VR Motion"
+      },
+      "last_changed": "2023-11-28T20:55:56.812447+00:00",
+      "last_updated": "2023-11-28T20:55:56.895253+00:00",
+      "context": {
+        "id": "01HGBVF5PZG1FF380GZDP8NHSG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.blink_g8t1_sj02_3294_01vr_temperature",
+      "state": "unknown",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "blink G8T1-SJ02-3294-01VR Temperature"
+      },
+      "last_changed": "2023-11-28T20:55:56.840291+00:00",
+      "last_updated": "2023-11-28T20:55:56.840291+00:00",
+      "context": {
+        "id": "01HGBVF5N8ZSG5C7V0Z8J44P72",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.blink_g8t1_sj02_3294_01vr_wi_fi_rssi",
+      "state": "unknown",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "dBm",
+        "device_class": "signal_strength",
+        "friendly_name": "blink G8T1-SJ02-3294-01VR Wi-Fi RSSI"
+      },
+      "last_changed": "2023-11-28T20:55:56.842195+00:00",
+      "last_updated": "2023-11-28T20:55:56.842195+00:00",
+      "context": {
+        "id": "01HGBVF5NARHGF4EM6V6FX2DJK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "camera.g8t1_sj02_3294_01vr",
+      "state": "idle",
+      "attributes": {
+        "access_token": "1fbb25fa523e33023d4c84ed462e35c69b38cd3fcd23b708113454838aea2cce",
+        "brand": "Blink",
+        "name": "G8T1-SJ02-3294-01VR",
+        "camera_id": "58738",
+        "serial": "G8T1SJ02329401VR",
+        "temperature": null,
+        "temperature_c": null,
+        "temperature_calibrated": null,
+        "battery": "ok",
+        "battery_voltage": null,
+        "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701291546&ext=",
+        "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3212704697.mp4",
+        "recent_clips": [],
+        "motion_enabled": false,
+        "motion_detected": false,
+        "wifi_strength": null,
+        "network_id": "270992",
+        "sync_module": "G8T1-SJ02-3294-01VR",
+        "last_record": "2023-11-29T20:59:06+00:00",
+        "type": "lotus",
+        "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=1fbb25fa523e33023d4c84ed462e35c69b38cd3fcd23b708113454838aea2cce",
+        "friendly_name": "blink G8T1-SJ02-3294-01VR",
+        "supported_features": 0
+      },
+      "last_changed": "2023-11-28T20:55:56.957167+00:00",
+      "last_updated": "2023-11-29T21:01:22.310089+00:00",
+      "context": {
+        "id": "01HGEE5TG6R232PAND0RP3R6S9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "alarm_control_panel.blink_g8t1_sj02_3294_01vr",
+      "state": "disarmed",
+      "attributes": {
+        "code_format": null,
+        "changed_by": null,
+        "code_arm_required": true,
+        "name": "G8T1-SJ02-3294-01VR",
+        "id": 58738,
+        "network_id": "270992",
+        "serial": "G8T1SJ02329401VR",
+        "status": false,
+        "region_id": "u030",
+        "local_storage": false,
+        "icon": "mdi:security",
+        "friendly_name": "blink G8T1-SJ02-3294-01VR",
+        "supported_features": 2
+      },
+      "last_changed": "2023-11-28T20:55:56.958924+00:00",
+      "last_updated": "2023-11-28T20:55:56.958924+00:00",
+      "context": {
+        "id": "01HGBVF5RYT07CHD5JYBMNC4DZ",
+        "parent_id": null,
+        "user_id": null
+      }
+    }
+  ]
+}
