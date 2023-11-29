@@ -63,7 +63,17 @@ socket.onmessage = (event) => {
 
         switch (deviceID) {
           case lampLight:
-            readLampLight(data1);
+            const offLight = document.getElementById("fancyTest-OFF");
+            const onLight = document.getElementById("fancyTest-ON");
+            if (data1.event.data.new_state.state == "on") {
+              onLight.style.color = "green";
+              offLight.style.color = "red";
+            } else if (data1.event.data.new_state.state) {
+              onLight.style.color = "red";
+              offLight.style.color = "green";
+            } else {
+              console.log("LIGHTUNKNOWN");
+            }
             break;
           case luminSensor:
             const fLumUp = document.getElementById("fancyTest-LightUp");
@@ -165,7 +175,6 @@ function turnOffSwitch() {
   sendMessage(message);
 }
 
-//Function to flick light switch
 function flickSwitch(buttonID) {
   const button = document.getElementById(buttonID);
   if (button.checked == true) {
