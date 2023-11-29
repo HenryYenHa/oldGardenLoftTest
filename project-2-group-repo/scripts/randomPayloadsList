@@ -1,0 +1,301 @@
+{
+  "type": "event",
+  "event": {
+    "event_type": "state_changed",
+    "data": {
+      "entity_id": "camera.g8t1_sj02_3294_01vr",
+      "old_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "330bf33e8c7630c02d8372aaabbc026ca0983491aedff1bc1a7377ff6816409f",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701224084&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3208726869.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T02:14:43+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=330bf33e8c7630c02d8372aaabbc026ca0983491aedff1bc1a7377ff6816409f",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T02:18:44.335550+00:00",
+        "context": {
+          "id": "01HGCDY77F314WWWSC8XK2GWSQ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "new_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "60eac1136e1f04cfb0278083a4c0b733ffb4c191dc6f21c5a4a7697b9873397e",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701224084&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3208726869.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T02:14:43+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=60eac1136e1f04cfb0278083a4c0b733ffb4c191dc6f21c5a4a7697b9873397e",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T02:20:56.841341+00:00",
+        "context": {
+          "id": "01HGCE28M9Q39BQN66K6BV9MN8",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2023-11-29T02:20:56.841341+00:00",
+    "context": {
+      "id": "01HGCE28M9Q39BQN66K6BV9MN8",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "id": 2
+}
+
+
+
+
+
+UPDATE IMAGE???
+{
+  "type": "event",
+  "event": {
+    "event_type": "state_changed",
+    "data": {
+      "entity_id": "camera.g8t1_sj02_3294_01vr",
+      "old_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "c6471d32329b97dcfc8b0fc4c50c5efd58bc1f986de86cacac6d4c622e876f22",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701224592&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3208784169.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T02:23:12+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=c6471d32329b97dcfc8b0fc4c50c5efd58bc1f986de86cacac6d4c622e876f22",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T02:25:56.842949+00:00",
+        "context": {
+          "id": "01HGCEBDKATYVGTGNJRPPAHZKT",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "new_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "c6471d32329b97dcfc8b0fc4c50c5efd58bc1f986de86cacac6d4c622e876f22",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701224885&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3208816187.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T02:28:05+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=c6471d32329b97dcfc8b0fc4c50c5efd58bc1f986de86cacac6d4c622e876f22",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T02:29:41.281876+00:00",
+        "context": {
+          "id": "01HGCEJ8S1MK917PV8Y12345YH",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2023-11-29T02:29:41.281876+00:00",
+    "context": {
+      "id": "01HGCEJ8S1MK917PV8Y12345YH",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "id": 2
+}
+
+
+UNKNOWN CAMERA DATA
+
+{
+  "type": "event",
+  "event": {
+    "event_type": "state_changed",
+    "data": {
+      "entity_id": "camera.g8t1_sj02_3294_01vr",
+      "old_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "c6471d32329b97dcfc8b0fc4c50c5efd58bc1f986de86cacac6d4c622e876f22",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701224885&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3208816187.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T02:28:05+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=c6471d32329b97dcfc8b0fc4c50c5efd58bc1f986de86cacac6d4c622e876f22",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T02:29:41.281876+00:00",
+        "context": {
+          "id": "01HGCEJ8S1MK917PV8Y12345YH",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "new_state": {
+        "entity_id": "camera.g8t1_sj02_3294_01vr",
+        "state": "idle",
+        "attributes": {
+          "access_token": "e921079c18f26d17995530254420f7639219e55eabc062d8cb814ffa4403d4a4",
+          "brand": "Blink",
+          "name": "G8T1-SJ02-3294-01VR",
+          "camera_id": "58738",
+          "serial": "G8T1SJ02329401VR",
+          "temperature": null,
+          "temperature_c": null,
+          "temperature_calibrated": null,
+          "battery": "ok",
+          "battery_voltage": null,
+          "thumbnail": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/thumbnail/thumbnail.jpg?ts=1701224885&ext=",
+          "video": "https://rest-u030.immedia-semi.com/api/v3/media/accounts/207221/networks/270992/lotus/58738/button_press/3208816187.mp4",
+          "recent_clips": [],
+          "motion_enabled": false,
+          "motion_detected": false,
+          "wifi_strength": null,
+          "network_id": "270992",
+          "sync_module": "G8T1-SJ02-3294-01VR",
+          "last_record": "2023-11-29T02:28:05+00:00",
+          "type": "lotus",
+          "entity_picture": "/api/camera_proxy/camera.g8t1_sj02_3294_01vr?token=e921079c18f26d17995530254420f7639219e55eabc062d8cb814ffa4403d4a4",
+          "friendly_name": "blink G8T1-SJ02-3294-01VR",
+          "supported_features": 0
+        },
+        "last_changed": "2023-11-28T20:55:56.957167+00:00",
+        "last_updated": "2023-11-29T02:30:56.844044+00:00",
+        "context": {
+          "id": "01HGCEMJJC9Y8B64XGHGGHKNF5",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2023-11-29T02:30:56.844044+00:00",
+    "context": {
+      "id": "01HGCEMJJC9Y8B64XGHGGHKNF5",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "id": 2
+}
+
+
+
+
+
+
+
+
+THIS IS FOR 5 MIN RECORDER DATA
+{
+  "type": "event",
+  "event": {
+    "event_type": "recorder_5min_statistics_generated",
+    "data": {},
+    "origin": "LOCAL",
+    "time_fired": "2023-11-29T02:30:10.346823+00:00",
+    "context": {
+      "id": "01HGCEK55ANAHHVCB50QRM00ZN",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "id": 2
+}
