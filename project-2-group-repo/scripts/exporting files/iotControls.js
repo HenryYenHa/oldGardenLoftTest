@@ -2,25 +2,28 @@
 // https://developers.home-assistant.io/docs/api/websocket
 // demoMove1 key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhOGNiMTNjZTJiN2Y0ZDFjYjk0MWM1YzFjYTRmN2YyMSIsImlhdCI6MTcwMDI1MDQxNywiZXhwIjoyMDE1NjEwNDE3fQ.xc0OTLmb-UVyHwM-ts1HP36neodPU5t4UzSy0i8OJsQ
 const socket = new WebSocket("ws://homeassistant.local:8123/api/websocket");
+const accessToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhOGNiMTNjZTJiN2Y0ZDFjYjk0MWM1YzFjYTRmN2YyMSIsImlhdCI6MTcwMDI1MDQxNywiZXhwIjoyMDE1NjEwNDE3fQ.xc0OTLmb-UVyHwM-ts1HP36neodPU5t4UzSy0i8OJsQ";
 let idNumber = 1; //Initial ID number
-let statDevice = "";
-let statStatusOfDevice = "";
-let statFlag = false;
-let statID = -1;
+let interactFlag = true; //Interact Flag to prevent overwrites
+
+//Global variables to check the status of devices
+let statDevice = ""; //Global Variable to seek device's information
+let statStatusOfDevice = ""; //Global Variable of sought device's information
+let statFlag = false; //Global Variable to check Status; prevents reading before getting information
+let statID = -1; //Global Variable to check status when it is asked for
 
 // List of input IDs
 const doorBell = "camera.g8t1_sj02_3294_01vr"; //Name of Doorbell
 const doorBellMotion = "blink G8T1-SJ02-3294-01VR Motion"; //Name of Doorbell Motion sensor?
-const lampLight = "switch.thing2"; //Name of Lamp; Should be Overhead lights; light 0
-const floorLights = ""; //Name of incoming new switch light 1; Should be Floor lights; light 1
-const newLight2 = ""; //Name of incoming new switch light 2; Should be Accent lights; light 2
-const newLight3 = ""; //Name of incoming new switch light 3; Should be Hand-rail lights; light 3
-const newLight4 = ""; //Name of incoming new switch light 4; Should be Washroom lights; light 4
+const overheadLights = "switch.thing2"; //Name of Lamp; Should be Overhead lights; light 0
+const floorLights = "tempFakeFloor"; //Name of incoming new switch light 1; light 1
+const accentLights = "tempFakeAccent"; //Name of incoming new switch light 2; light 2
+const handrailLights = "tempFakeHand"; //Name of incoming new switch light 3; light 3
+const washroomLights = "tempFakeWash"; //Name of incoming new switch light 4; light 4
 const motionSensor = "binary_sensor.presence_sensor_fp2_1708_presence_sensor_1"; //Name of Motion Sensor
 const luminSensor = "sensor.presence_sensor_fp2_1708_light_sensor_light_level"; //Name of Light sensor
 const weightSensor = "sensor.smart_scale_c1_real_time_weight"; //Name of Weight sensor
-const autoLeave = "automation.leave_off_light"; //Name of Automation1
-const autoEnter = "automation.enter_for_light"; // Name of Automation2
 
 // START OF SOCKET ACTIONS
 // ********************************************************************************************************** //
@@ -32,8 +35,7 @@ socket.onopen = (event) => {
   socket.send(
     JSON.stringify({
       type: "auth",
-      access_token:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhOGNiMTNjZTJiN2Y0ZDFjYjk0MWM1YzFjYTRmN2YyMSIsImlhdCI6MTcwMDI1MDQxNywiZXhwIjoyMDE1NjEwNDE3fQ.xc0OTLmb-UVyHwM-ts1HP36neodPU5t4UzSy0i8OJsQ", // This is the group's access token
+      access_token: accessToken,
     })
   );
 
@@ -45,7 +47,6 @@ socket.onopen = (event) => {
     })
   );
   idNumber++;
-  getStates(); //debug
 };
 
 // When we receive a message, we want to...
@@ -63,8 +64,12 @@ socket.onmessage = (event) => {
         console.log("2)EntityID: ", deviceID); //debug
         //... then we will act accordingly.
         switch (deviceID) {
-          case lampLight:
-            readLampLight(data1);
+          case overheadLights:
+          case floorLights:
+          case accentLights:
+          case handrailLights:
+          case washroomLights:
+            readLight(data1, deviceID);
             break;
           case luminSensor:
             readLuminSensor(data1);
@@ -74,6 +79,12 @@ socket.onmessage = (event) => {
             break;
           case weightSensor:
             readWeightSensor(data1);
+            break;
+          case doorBell:
+            readDoorbell(data1);
+            break;
+          case "sun.sun":
+            console.log("3)Sun Data");
             break;
           default:
             //... unless we actually aren't familiar with it.
@@ -106,7 +117,7 @@ socket.onclose = (event) => {
 
 //Upon Sending a message
 function sendMessage(message) {
-  console.log("Sending message:", message); //debug
+  console.log("POST: ", message); //debug
   socket.send(message);
 }
 
@@ -116,6 +127,7 @@ function getStates() {
     id: idNumber,
     type: "get_states",
   });
+  statID = idNumber;
   idNumber++;
   console.log(message);
   sendMessage(message);
@@ -123,7 +135,6 @@ function getStates() {
 
 //Grab status
 function getStatus(deviceID) {
-  statID = idNumber;
   statDevice = deviceID;
   getStates();
   let int = setInterval(() => {
@@ -136,108 +147,114 @@ function getStatus(deviceID) {
   }, 1000);
 }
 
-// //DEPRECIATE
-// //To Turn on the light
-// function turnOnSwitch() {
-//   // Example: Send a command to turn on Switch
-//   const message = JSON.stringify({
-//     id: idNumber,
-//     type: "call_service",
-//     domain: "switch",
-//     service: "turn_on",
-//     service_data: {
-//       entity_id: "switch.thing2", // Replace with your switch entity ID
-//     },
-//   });
-//   idNumber++;
-//   sendMessage(message);
-// }
-
-// //DEPRECIATE
-// function turnOffSwitch() {
-//   // Example: Send a command to turn off Switch
-//   const message = JSON.stringify({
-//     id: idNumber,
-//     type: "call_service",
-//     domain: "switch",
-//     service: "turn_off",
-//     service_data: {
-//       entity_id: "switch.thing2", // Replace with your switch entity ID
-//     },
-//   });
-//   idNumber++;
-//   sendMessage(message);
-// }
-
-// //DEPRECIATE
-// //Function to flick light switch
-// function flickSwitch(buttonID) {
-//   const button = document.getElementById(buttonID);
-//   if (button.checked == true) {
-//     turnOnSwitch();
-//   } else if (button.checked == false) {
-//     turnOffSwitch();
-//   }
-// }
-
 // DEVICE FUNCTIONS
 //********************************************************************************/
 
 //Function to flick the light switch
 function triggerLightSwitch(buttonID) {
-  //Check which light is the corresponding ID given
-  const deviceName = checkWhichLight(buttonID);
-  const message = JSON.stringify({
-    id: idNumber,
-    type: "call_service",
-    domain: "switch",
-    service: "toggle",
-    service_data: {
-      entity_id: deviceName,
-    },
-  });
-  idNumber++;
-  sendMessage(message);
-  return getStatus(deviceName);
-}
-
-//Sub-function of triggerLightSwitch
-function checkWhichLight(buttonID) {
-  switch (buttonID) {
-    case 0:
-      //Overhead lights
-      //Temporarily as the lamp
-      return lampLight;
-    case 1:
-      //Floor lights
-      return floorLights;
-    case 2:
-      //Accent lights
-      return newLight2;
-    case 3:
-      //Hand-rail lights
-      return newLight3;
-    case 4:
-      //Washroom lights
-      return newLight4;
-    default:
-      console.log("Error: Unknown button ID; buttonID: ", buttonID);
-      return "UNKNOWN LIGHT";
+  if (interactFlag) {
+    interactFlag = false;
+    //Check which light is the corresponding ID given
+    const obj = checkWhichLight(buttonID);
+    const deviceName = obj.deviceID;
+    const message = JSON.stringify({
+      id: idNumber,
+      type: "call_service",
+      domain: "switch",
+      service: "toggle",
+      service_data: {
+        entity_id: deviceName,
+      },
+    });
+    idNumber++;
+    sendMessage(message);
+    return getStatus(deviceName);
+  } else {
+    console.log(
+      "InteractionTemporarilyDisabled^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+    );
+    return "NOPE";
   }
 }
 
-// How we deal with reading lamplight statuses from the Pi
-function readLampLight(data1) {
+//Sub-function of triggerLightSwitch
+function checkWhichLight(identifier) {
+  switch (identifier) {
+    case 0:
+    case "Overhead Lights":
+    case overheadLights:
+    case "vCarouselLightID0":
+      return {
+        idNum: 0,
+        name: "Overhead Light",
+        deviceID: overheadLights,
+        elem: document.getElementById("vCarouselLightID0"),
+      };
+    case 1:
+    case "Floor Lights":
+    case floorLights:
+    case "vCarouselLightID1":
+      return {
+        idNum: 1,
+        name: "Floor Lights",
+        deviceID: floorLights,
+        elem: document.getElementById("vCarouselLightID1"),
+      };
+    case 2:
+    case "Accent Lights":
+    case accentLights:
+    case "vCarouselLightID2":
+      return {
+        idNum: 2,
+        name: "Accent Lights",
+        deviceID: accentLights,
+        elem: document.getElementById("vCarouselLightID2"),
+      };
+    case 3:
+    case "Handrail Lights":
+    case handrailLights:
+    case "vCarouselLightID3":
+      return {
+        idNum: 3,
+        name: "Handrail Lights",
+        deviceID: handrailLights,
+        elem: document.getElementById("vCarouselLightID3"),
+      };
+    case 4:
+    case "Washroom Lights":
+    case washroomLights:
+    case "vCarouselLightID4":
+      return {
+        idNum: 4,
+        name: "Washroom Lights",
+        deviceID: washroomLights,
+        elem: document.getElementById("vCarouselLightID4"),
+      };
+    default:
+      console.log("Error: input pairing unknown:", identifier);
+      return "UNKNOWN LIGHT PAIRING";
+  }
+}
+
+//How we deal with reading the doorbell
+function readDoorbell(data1) {
+  console.log("Reached Doorbell");
+}
+
+function readLight(data1, deviceID) {
   //REPLACE ALL OF THESE WITH APPROPRIATE ACTIONS!
-  const offLight = document.getElementById("fancyTest-OFF"); //CHANGE
-  const onLight = document.getElementById("fancyTest-ON"); //CHANGE
   const newState = data1.event.data.new_state.state;
+  const obj = checkWhichLight(deviceID);
+  const elementID = obj.elem;
+  console.log("Light: ", deviceID, "; Status: ", newState);
   if (newState == "on") {
-    onLight.style.color = "green"; //CHANGE
-    offLight.style.color = "red"; //CHANGE
+    elementID.innerHTML = `<img src="../images/lightOn.png">
+     <p>${obj.name}</p>
+     <div class="isLightOn">ON</div>`;
   } else if (newState == "off") {
-    onLight.style.color = "red"; //CHANGE
-    offLight.style.color = "green"; //CHANGE
+    elementID.innerHTML = `<img src="../images/lightOff.png">
+     <p>${obj.name}</p>
+     <div class="isLightOff">OFF</div>`;
   } else {
     console.log("Error: Unknown new light state: ", newState);
   }
@@ -287,21 +304,19 @@ function readOtherDataType(data1) {
   switch (eventType) {
     case "call_service":
       console.log("3)Event Type: call_service");
-      console.log("3)Payload: ", data1);
       break;
     case "config_entry_discovered":
       console.log("3)Event Type: config_entry_discovered");
-      console.log("3)Payload: ", data1);
       break;
     case "recorder_5min_statistics_generated":
       console.log("3)Event Type: recorder_5min_statistics_generated");
-      console.log("3)Payload: ", data1);
       break;
     default:
       console.log("3)Unlisted event type: ", eventType);
-      console.log("3)Payload: ", data1);
       break;
   }
+
+  console.log("3.5)Payload: ", data1);
 }
 
 //How we deal with readings from the weight sensor; it detects and stores the value in KG
@@ -322,11 +337,16 @@ function readResults(data1) {
     if (information[i].entity_id == statDevice) {
       statStatusOfDevice = information[i].state;
       statFlag = true;
+      setTimeout(enableInteractionFlag(), 1000);
       console.log("INREAD:", statStatusOfDevice); //DEBUG
       break;
     }
     i++;
   }
+}
+
+function enableInteractionFlag() {
+  interactFlag = true;
 }
 
 console.log("IoT controls loaded"); //debug

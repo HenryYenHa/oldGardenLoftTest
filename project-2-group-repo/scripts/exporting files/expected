@@ -1,0 +1,13 @@
+//Expected JSON files for schedule
+Event Pool:
+{
+  id: integer;
+  name: String;
+  day: Date;
+  time: time;
+  location: String;
+  icon: URL/name/type;
+  brief: String;
+}
+
+

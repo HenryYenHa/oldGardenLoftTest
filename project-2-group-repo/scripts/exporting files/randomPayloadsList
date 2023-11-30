@@ -1,4 +1,41 @@
 {
+  "id": 18,
+  "type": "result",
+  "success": true,
+  "result": {
+    "context": {
+      "id": "01HGEWH8PVXC9R9G07D3F41BN4",
+      "parent_id": null,
+      "user_id": "47b65013705140feb854f7e516c0396e"
+    }
+  }
+}
+
+{
+  "type": "event",
+  "event": {
+    "event_type": "call_service",
+    "data": {
+      "domain": "switch",
+      "service": "toggle",
+      "service_data": {
+        "entity_id": "switch.thing2"
+      }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2023-11-30T01:13:44.843848+00:00",
+    "context": {
+      "id": "01HGEWKY4BK4VBAJZMHY6STCJY",
+      "parent_id": null,
+      "user_id": "47b65013705140feb854f7e516c0396e"
+    }
+  },
+  "id": 1
+}
+
+
+
+{
   "type": "event",
   "event": {
     "event_type": "state_changed",
